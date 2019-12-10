@@ -3,7 +3,7 @@ import autoPreprocess from "svelte-preprocess"
 import resolve from 'rollup-plugin-node-resolve'
 import commonjs from 'rollup-plugin-commonjs'
 import livereload from 'rollup-plugin-livereload'
-import typescript from 'rollup-plugin-typescript'
+import typescript from 'rollup-plugin-typescript2'
 import { terser } from 'rollup-plugin-terser'
 
 const dev = process.env.NODE_ENV === "development";
