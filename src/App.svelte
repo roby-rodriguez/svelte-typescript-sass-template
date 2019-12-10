@@ -1,18 +1,29 @@
-<template type="text/pug">
-    h1 Hello!
-    br
-    input(bind:value="{label}")
-    br
-    Nested("{label}")
-</template>
+<h1>Hello world!</h1>
+<div class="parent">
+    <div class="child">
+        haha
+    </div>
+</div>
+<input type="text" bind:value={label}>
+<Nested label={label}>
+</Nested>
 
-<script type="text/typescript">
+<script lang="typescript">
     import Nested from './Nested.svelte'
-    export let label: string = ''
+    export let label: string = '';
     $: console.log(label)
 </script>
 
-<style type="text/stylus">
-    h1
-        color blue
+<style lang="scss">
+    h1 {
+        color: red;
+    }
+    .parent {
+        height: 100px;
+        color: green;
+        .child {
+            height: 150px;
+            color: blue;
+        }
+    }
 </style>

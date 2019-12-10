@@ -1,9 +1,10 @@
 import App from './App.svelte';
+import { firstLetterOut } from './core/test';
 
 const app = new App({
     target: document.body,
     props: {
-        name: 'world'
+        name: firstLetterOut('world')
     }
 });
 
